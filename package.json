@@ -2,7 +2,7 @@
   "name": "falah-abdussalam-pro-profolio",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://falahabdussalam.github.io/falah-abdussalam-pro",
+  "homepage": "https://falahabdussalam.github.io/falahcrg",
   "type": "module",
   "scripts": {
     "dev": "vite",

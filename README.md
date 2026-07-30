@@ -38,8 +38,8 @@ Make sure you have **Node.js (v18+)** and **npm** installed on your system.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/falahabdussalam/falah-abdussalam-pro.git
-cd falah-abdussalam-pro
+git clone https://github.com/falahabdussalam/falahcrg.git
+cd falahcrg
 ```
 
 ### 2. Install Dependencies
@@ -82,11 +82,11 @@ npm run deploy
 This command automatically builds the project (`npm run build`) and publishes the `dist` folder to the `gh-pages` branch of your GitHub repository.
 
 #### GitHub Actions / Settings Setup
-1. Go to your repository on GitHub: `https://github.com/falahabdussalam/falah-abdussalam-pro`
+1. Go to your repository on GitHub: `https://github.com/falahabdussalam/falahcrg`
 2. Click **Settings** > **Pages**.
 3. Under **Source**, select **Deploy from a branch**.
 4. Choose the `gh-pages` branch and `/ (root)` folder, then click **Save**.
-5. Your site will be live at `https://falahabdussalam.github.io/falah-abdussalam-pro/`!
+5. Your site will be live at `https://falahabdussalam.github.io/falahcrg/`!
 
 ---
 
