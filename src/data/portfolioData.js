@@ -10,7 +10,7 @@ export const personalInfo = {
   ],
   bio: "Passionate multi-disciplinary technology architect and creative designer with over 5 years of experience bridging software engineering, pixel-perfect UI/UX design, and data-driven digital marketing. Dedicated to engineering high-performance digital products that captivate users and elevate brands worldwide.",
   location: "Kerala, India",
-  email: "falah.abdussalam.pro@gmail.com",
+  email: "falahkodagu@gmail.com",
   phone: "+91 98765 43210",
   whatsapp: "+919876543210",
   whatsappUrl: "https://wa.me/919876543210?text=Hi%20Falah,%20I'd%20like%20to%20discuss%20a%20project!",
