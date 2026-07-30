@@ -11,9 +11,9 @@ export const personalInfo = {
   bio: "Passionate multi-disciplinary technology architect and creative designer with over 5 years of experience bridging software engineering, pixel-perfect UI/UX design, and data-driven digital marketing. Dedicated to engineering high-performance digital products that captivate users and elevate brands worldwide.",
   location: "Kerala, India",
   email: "falahkodagu@gmail.com",
-  phone: "+91 98765 43210",
-  whatsapp: "+919876543210",
-  whatsappUrl: "https://wa.me/919876543210?text=Hi%20Falah,%20I'd%20like%20to%20discuss%20a%20project!",
+  phone: "+91 81053 26568",
+  whatsapp: "+918105326568",
+  whatsappUrl: "https://wa.me/918105326568?text=Hi%20Falah,%20I'd%20like%20to%20discuss%20a%20project!",
   availableForHire: true,
   metrics: [
     { value: 5, suffix: "+", label: "Years Experience" },
