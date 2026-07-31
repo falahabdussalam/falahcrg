@@ -59,7 +59,7 @@ export default function Contact() {
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ['#FF3B30', '#FFFFFF', '#FF253A']
+          colors: ['#2563EB', '#FFFFFF', '#3B82F6']
         });
       } catch (error) {
         console.error('Error submitting form to Google Forms:', error);
@@ -70,20 +70,20 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-[#09090b]">
+    <section id="contact" className="py-24 relative overflow-hidden bg-[#07090e]">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF3B30]/10 rounded-full blur-[200px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#2563EB]/10 rounded-full blur-[200px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121218] border border-[#FF3B30]/30 text-xs font-mono text-[#FF3B30] mb-3 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0d121e] border border-[#2563EB]/30 text-xs font-mono text-[#2563EB] mb-3 uppercase tracking-wider">
             <Mail className="w-3.5 h-3.5" />
             <span>LET'S BUILD SOMETHING GREAT</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Get In <span className="text-gradient-red">Touch</span>
+            Get In <span className="text-gradient-blue">Touch</span>
           </h2>
           <p className="text-zinc-400 text-base sm:text-lg">
             Have a project in mind, a job opportunity, or just want to connect? Send a message and let's start the conversation!
@@ -106,12 +106,12 @@ export default function Contact() {
               href={`mailto:${personalInfo.email}`}
               className="glass-card glass-card-hover p-6 rounded-3xl border border-white/10 flex items-center gap-5 block group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#121218] border border-[#FF3B30]/30 flex items-center justify-center text-[#FF3B30] group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 rounded-2xl bg-[#0d121e] border border-[#2563EB]/30 flex items-center justify-center text-[#2563EB] group-hover:scale-110 transition-transform">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
                 <div className="text-xs font-mono text-zinc-500 uppercase mb-0.5">DIRECT EMAIL</div>
-                <div className="text-base font-bold text-white group-hover:text-[#FF3B30] transition-colors break-all">
+                <div className="text-base font-bold text-white group-hover:text-[#2563EB] transition-colors break-all">
                   {personalInfo.email}
                 </div>
               </div>
@@ -122,12 +122,12 @@ export default function Contact() {
               href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
               className="glass-card glass-card-hover p-6 rounded-3xl border border-white/10 flex items-center gap-5 block group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#121218] border border-[#FF3B30]/30 flex items-center justify-center text-[#FF3B30] group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 rounded-2xl bg-[#0d121e] border border-[#2563EB]/30 flex items-center justify-center text-[#2563EB] group-hover:scale-110 transition-transform">
                 <Phone className="w-6 h-6" />
               </div>
               <div>
                 <div className="text-xs font-mono text-zinc-500 uppercase mb-0.5">PHONE NUMBER</div>
-                <div className="text-base font-bold text-white group-hover:text-[#FF3B30] transition-colors">
+                <div className="text-base font-bold text-white group-hover:text-[#2563EB] transition-colors">
                   {personalInfo.phone}
                 </div>
               </div>
@@ -140,12 +140,12 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="glass-card glass-card-hover p-6 rounded-3xl border border-white/10 flex items-center gap-5 block group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#121218] border border-[#FF3B30]/30 flex items-center justify-center text-[#FF3B30] group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 rounded-2xl bg-[#0d121e] border border-[#2563EB]/30 flex items-center justify-center text-[#2563EB] group-hover:scale-110 transition-transform">
                 <MessageSquare className="w-6 h-6" />
               </div>
               <div>
                 <div className="text-xs font-mono text-zinc-500 uppercase mb-0.5">WHATSAPP CHAT</div>
-                <div className="text-base font-bold text-white group-hover:text-[#FF3B30] transition-colors">
+                <div className="text-base font-bold text-white group-hover:text-[#2563EB] transition-colors">
                   Instant Message Me
                 </div>
               </div>
@@ -153,8 +153,8 @@ export default function Contact() {
 
             {/* Location Card */}
             <div className="glass-card p-6 rounded-3xl border border-white/10 flex items-center gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-[#121218] border border-white/10 flex items-center justify-center text-zinc-400">
-                <MapPin className="w-6 h-6 text-[#FF3B30]" />
+              <div className="w-14 h-14 rounded-2xl bg-[#0d121e] border border-white/10 flex items-center justify-center text-zinc-400">
+                <MapPin className="w-6 h-6 text-[#2563EB]" />
               </div>
               <div>
                 <div className="text-xs font-mono text-zinc-500 uppercase mb-0.5">LOCATION</div>
@@ -183,9 +183,9 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mb-6 p-4 rounded-2xl bg-[#FF3B30]/15 border border-[#FF3B30] flex items-center gap-3 text-white text-sm"
+                  className="mb-6 p-4 rounded-2xl bg-[#2563EB]/15 border border-[#2563EB] flex items-center gap-3 text-white text-sm"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-[#FF3B30] shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[#2563EB] shrink-0" />
                   <span>Thank you! Your message has been sent successfully. I will get back to you within 24 hours.</span>
                 </motion.div>
               )}
@@ -202,8 +202,8 @@ export default function Contact() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. John Doe"
-                      className={`w-full px-4 py-3 rounded-xl bg-[#121218] border ${
-                        errors.name ? 'border-red-500' : 'border-white/10 focus:border-[#FF3B30]'
+                      className={`w-full px-4 py-3 rounded-xl bg-[#0d121e] border ${
+                        errors.name ? 'border-red-500' : 'border-white/10 focus:border-[#2563EB]'
                       } text-white placeholder-zinc-500 text-sm focus:outline-none transition-colors`}
                     />
                     {errors.name && (
@@ -224,8 +224,8 @@ export default function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. john@example.com"
-                      className={`w-full px-4 py-3 rounded-xl bg-[#121218] border ${
-                        errors.email ? 'border-red-500' : 'border-white/10 focus:border-[#FF3B30]'
+                      className={`w-full px-4 py-3 rounded-xl bg-[#0d121e] border ${
+                        errors.email ? 'border-red-500' : 'border-white/10 focus:border-[#2563EB]'
                       } text-white placeholder-zinc-500 text-sm focus:outline-none transition-colors`}
                     />
                     {errors.email && (
@@ -247,8 +247,8 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="Project Inquiry / Job Opportunity"
-                    className={`w-full px-4 py-3 rounded-xl bg-[#121218] border ${
-                      errors.subject ? 'border-red-500' : 'border-white/10 focus:border-[#FF3B30]'
+                    className={`w-full px-4 py-3 rounded-xl bg-[#0d121e] border ${
+                      errors.subject ? 'border-red-500' : 'border-white/10 focus:border-[#2563EB]'
                     } text-white placeholder-zinc-500 text-sm focus:outline-none transition-colors`}
                   />
                   {errors.subject && (
@@ -269,8 +269,8 @@ export default function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell me about your project scope, timeline, and goals..."
-                    className={`w-full px-4 py-3 rounded-xl bg-[#121218] border ${
-                      errors.message ? 'border-red-500' : 'border-white/10 focus:border-[#FF3B30]'
+                    className={`w-full px-4 py-3 rounded-xl bg-[#0d121e] border ${
+                      errors.message ? 'border-red-500' : 'border-white/10 focus:border-[#2563EB]'
                     } text-white placeholder-zinc-500 text-sm focus:outline-none transition-colors resize-none`}
                   />
                   {errors.message && (
@@ -285,7 +285,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-[#FF3B30] text-white font-bold text-sm shadow-[0_0_25px_rgba(255,59,48,0.4)] hover:bg-[#FF253A] hover:shadow-[0_0_35px_rgba(255,59,48,0.6)] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full py-4 rounded-xl bg-[#2563EB] text-white font-bold text-sm shadow-[0_0_25px_rgba(37,99,235,0.4)] hover:bg-[#1D4ED8] hover:shadow-[0_0_35px_rgba(37,99,235,0.6)] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <span>Sending Message...</span>

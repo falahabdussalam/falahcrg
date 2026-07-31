@@ -52,8 +52,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-slate-100 selection:bg-[#FF3B30] selection:text-white font-['Poppins',sans-serif]">
-      {/* Custom Red Glow Cursor */}
+    <div className="min-h-screen bg-[#07090e] text-slate-100 selection:bg-[#2563EB] selection:text-white font-['Poppins',sans-serif]">
+      {/* Custom Blue Glow Cursor */}
       <CustomCursor />
 
       {/* Loading Splash Screen */}

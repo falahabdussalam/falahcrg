@@ -20,20 +20,20 @@ export default function Skills() {
   const [activeCategory, setActiveCategory] = useState("Frontend");
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-[#09090b]">
+    <section id="skills" className="py-24 relative overflow-hidden bg-[#07090e]">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#FF3B30]/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121218] border border-[#FF3B30]/30 text-xs font-mono text-[#FF3B30] mb-3 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0d121e] border border-[#2563EB]/30 text-xs font-mono text-[#2563EB] mb-3 uppercase tracking-wider">
             <Cpu className="w-3.5 h-3.5" />
             <span>TECHNICAL CAPABILITIES</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Tools & <span className="text-gradient-red">Proficiencies</span>
+            Tools & <span className="text-gradient-blue">Proficiencies</span>
           </h2>
           <p className="text-zinc-400 text-base sm:text-lg">
             A comprehensive overview of technologies, frameworks, software, and marketing platforms I master.
@@ -52,8 +52,8 @@ export default function Skills() {
                 onClick={() => setActiveCategory(cat)}
                 className={`relative px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all duration-300 ${
                   isActive
-                    ? 'text-white bg-[#FF3B30] shadow-[0_0_20px_rgba(255,59,48,0.4)]'
-                    : 'text-zinc-400 bg-[#121218] border border-white/10 hover:text-white hover:border-[#FF3B30]/50'
+                    ? 'text-white bg-[#2563EB] shadow-[0_0_20px_rgba(37,99,235,0.4)]'
+                    : 'text-zinc-400 bg-[#0d121e] border border-white/10 hover:text-white hover:border-[#2563EB]/50'
                 }`}
               >
                 <IconComp className="w-4 h-4" />
@@ -86,13 +86,13 @@ export default function Skills() {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div
-                      className="w-10 h-10 rounded-xl bg-[#121218] border border-white/10 flex items-center justify-center font-bold text-lg"
-                      style={{ color: skill.color || '#FF3B30' }}
+                      className="w-10 h-10 rounded-xl bg-[#0d121e] border border-white/10 flex items-center justify-center font-bold text-lg"
+                      style={{ color: skill.color || '#2563EB' }}
                     >
                       {skill.name.charAt(0)}
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-white group-hover:text-[#FF3B30] transition-colors">
+                      <h3 className="text-base font-bold text-white group-hover:text-[#2563EB] transition-colors">
                         {skill.name}
                       </h3>
                       <div className="text-[11px] font-mono text-zinc-400">
@@ -100,7 +100,7 @@ export default function Skills() {
                       </div>
                     </div>
                   </div>
-                  <span className="text-base font-extrabold text-[#FF3B30] font-mono">
+                  <span className="text-base font-extrabold text-[#2563EB] font-mono">
                     {skill.level}%
                   </span>
                 </div>
@@ -111,17 +111,17 @@ export default function Skills() {
                     initial={{ width: 0 }}
                     animate={{ width: `${skill.level}%` }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="h-full rounded-full bg-gradient-to-r from-[#FF3B30] to-rose-400 shadow-[0_0_10px_#FF3B30]"
+                    className="h-full rounded-full bg-gradient-to-r from-[#2563EB] to-cyan-400 shadow-[0_0_10px_#2563EB]"
                   />
                 </div>
 
                 {/* Bottom Badges */}
                 <div className="mt-4 flex items-center justify-between text-[11px] text-zinc-400 pt-3 border-t border-zinc-800/60">
                   <span className="inline-flex items-center gap-1">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#FF3B30]" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#2563EB]" />
                     Verified Mastery
                   </span>
-                  <span className="font-mono text-[#FF3B30]">EXPERT</span>
+                  <span className="font-mono text-[#2563EB]">EXPERT</span>
                 </div>
               </motion.div>
             ))}

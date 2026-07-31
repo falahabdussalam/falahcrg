@@ -5,20 +5,20 @@ import { GraduationCap, Award, CheckCircle2 } from 'lucide-react';
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 relative overflow-hidden bg-[#09090b]">
+    <section id="education" className="py-24 relative overflow-hidden bg-[#07090e]">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#FF3B30]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#2563EB]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121218] border border-[#FF3B30]/30 text-xs font-mono text-[#FF3B30] mb-3 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0d121e] border border-[#2563EB]/30 text-xs font-mono text-[#2563EB] mb-3 uppercase tracking-wider">
             <GraduationCap className="w-3.5 h-3.5" />
             <span>ACADEMICS & CREDENTIALS</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Education & <span className="text-gradient-red">Certifications</span>
+            Education & <span className="text-gradient-blue">Certifications</span>
           </h2>
           <p className="text-zinc-400 text-base sm:text-lg">
             Formal computer science academic degree and specialized industry master certifications.
@@ -38,10 +38,10 @@ export default function Education() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#121218] border border-[#FF3B30]/30 flex items-center justify-center text-[#FF3B30]">
+                  <div className="w-12 h-12 rounded-2xl bg-[#0d121e] border border-[#2563EB]/30 flex items-center justify-center text-[#2563EB]">
                     <Award className="w-6 h-6" />
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-[#FF3B30]/15 border border-[#FF3B30]/40 text-xs font-mono text-[#FF3B30]">
+                  <span className="px-3 py-1 rounded-full bg-[#2563EB]/15 border border-[#2563EB]/40 text-xs font-mono text-[#2563EB]">
                     {edu.period}
                   </span>
                 </div>
@@ -52,7 +52,7 @@ export default function Education() {
                 <div className="space-y-2 mb-6">
                   {edu.highlights.map((h, hIdx) => (
                     <div key={hIdx} className="flex items-center gap-2 text-xs text-zinc-400">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#FF3B30] shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#2563EB] shrink-0" />
                       <span>{h}</span>
                     </div>
                   ))}
@@ -61,7 +61,7 @@ export default function Education() {
 
               <div className="pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono">
                 <span className="text-zinc-500 uppercase">STATUS</span>
-                <span className="text-[#FF3B30] font-bold">{edu.status}</span>
+                <span className="text-[#2563EB] font-bold">{edu.status}</span>
               </div>
             </motion.div>
           ))}

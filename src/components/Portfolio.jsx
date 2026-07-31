@@ -12,20 +12,20 @@ export default function Portfolio({ onSelectProject }) {
     : projectsData.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-24 relative overflow-hidden bg-[#09090b]">
+    <section id="portfolio" className="py-24 relative overflow-hidden bg-[#07090e]">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#FF3B30]/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121218] border border-[#FF3B30]/30 text-xs font-mono text-[#FF3B30] mb-3 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0d121e] border border-[#2563EB]/30 text-xs font-mono text-[#2563EB] mb-3 uppercase tracking-wider">
             <FolderKanban className="w-3.5 h-3.5" />
             <span>FEATURED SHOWCASE</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Selected <span className="text-gradient-red">Portfolio</span>
+            Selected <span className="text-gradient-blue">Portfolio</span>
           </h2>
           <p className="text-zinc-400 text-base sm:text-lg">
             A showcase of digital products, software applications, mobile UI concepts, brand identities, and growth marketing campaigns.
@@ -42,8 +42,8 @@ export default function Portfolio({ onSelectProject }) {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 ${
                   isActive
-                    ? 'bg-[#FF3B30] text-white shadow-[0_0_20px_rgba(255,59,48,0.4)]'
-                    : 'bg-[#121218] border border-white/10 text-zinc-400 hover:text-white hover:border-[#FF3B30]/50'
+                    ? 'bg-[#2563EB] text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]'
+                    : 'bg-[#0d121e] border border-white/10 text-zinc-400 hover:text-white hover:border-[#2563EB]/50'
                 }`}
               >
                 {cat}
@@ -69,22 +69,22 @@ export default function Portfolio({ onSelectProject }) {
                 className="glass-card glass-card-hover rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-between group"
               >
                 {/* Project Image & Overlay */}
-                <div className="relative aspect-video overflow-hidden bg-[#121218] cursor-pointer" onClick={() => onSelectProject(project)}>
+                <div className="relative aspect-video overflow-hidden bg-[#0d121e] cursor-pointer" onClick={() => onSelectProject(project)}>
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#07090e] via-transparent to-transparent opacity-80" />
                   
                   {/* Category Pill Tag */}
-                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#121218]/80 backdrop-blur-md border border-white/10 text-[11px] font-mono text-[#FF3B30]">
+                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#0d121e]/80 backdrop-blur-md border border-white/10 text-[11px] font-mono text-[#2563EB]">
                     {project.category}
                   </span>
 
                   {/* Hover Inspect Icon */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 backdrop-blur-xs transition-opacity duration-300">
-                    <div className="w-12 h-12 rounded-full bg-[#FF3B30] text-white flex items-center justify-center shadow-[0_0_20px_rgba(255,59,48,0.6)]">
+                    <div className="w-12 h-12 rounded-full bg-[#2563EB] text-white flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.6)]">
                       <Eye className="w-6 h-6" />
                     </div>
                   </div>
@@ -95,7 +95,7 @@ export default function Portfolio({ onSelectProject }) {
                   <div>
                     <h3
                       onClick={() => onSelectProject(project)}
-                      className="text-xl font-bold text-white mb-2 group-hover:text-[#FF3B30] transition-colors cursor-pointer"
+                      className="text-xl font-bold text-white mb-2 group-hover:text-[#2563EB] transition-colors cursor-pointer"
                     >
                       {project.title}
                     </h3>
@@ -108,7 +108,7 @@ export default function Portfolio({ onSelectProject }) {
                       {project.tech.map((t, idx) => (
                         <span
                           key={idx}
-                          className="px-2.5 py-0.5 rounded-md bg-[#121218] border border-white/5 text-[10px] font-mono text-zinc-300"
+                          className="px-2.5 py-0.5 rounded-md bg-[#0d121e] border border-white/5 text-[10px] font-mono text-zinc-300"
                         >
                           {t}
                         </span>
@@ -137,7 +137,7 @@ export default function Portfolio({ onSelectProject }) {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#FF3B30] hover:underline"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2563EB] hover:underline"
                       >
                         <span>Live Preview</span>
                         <ExternalLink className="w-3.5 h-3.5" />

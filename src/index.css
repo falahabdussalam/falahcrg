@@ -2,11 +2,11 @@
 
 @layer base {
   :root {
-    --primary: #FF3B30;
-    --primary-hover: #FF253A;
-    --primary-glow: rgba(255, 59, 48, 0.35);
-    --bg-dark: #09090b;
-    --bg-card: rgba(18, 18, 22, 0.75);
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+    --primary-glow: rgba(37, 99, 235, 0.35);
+    --bg-dark: #07090e;
+    --bg-card: rgba(13, 18, 30, 0.75);
   }
   
   html {
@@ -15,7 +15,7 @@
   }
   
   body {
-    background-color: #09090b;
+    background-color: #07090e;
     color: #f4f4f5;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -24,11 +24,11 @@
 
 /* Custom Glassmorphism Utility Classes */
 .glass-card {
-  background: rgba(18, 18, 24, 0.7);
+  background: rgba(13, 18, 30, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
 }
 
 .glass-card-hover {
@@ -36,29 +36,29 @@
 }
 
 .glass-card-hover:hover {
-  background: rgba(24, 24, 32, 0.85);
-  border-color: rgba(255, 59, 48, 0.4);
-  box-shadow: 0 12px 40px 0 rgba(255, 59, 48, 0.2), inset 0 0 15px rgba(255, 59, 48, 0.05);
+  background: rgba(18, 25, 42, 0.85);
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(37, 99, 235, 0.2), inset 0 0 15px rgba(37, 99, 235, 0.08);
   transform: translateY(-4px);
 }
 
 .glass-nav {
-  background: rgba(9, 9, 11, 0.85);
+  background: rgba(7, 9, 14, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.red-glow {
-  box-shadow: 0 0 25px rgba(255, 59, 48, 0.4);
+.blue-glow, .red-glow {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
 }
 
-.red-glow-lg {
-  box-shadow: 0 0 50px rgba(255, 59, 48, 0.25);
+.blue-glow-lg, .red-glow-lg {
+  box-shadow: 0 0 50px rgba(37, 99, 235, 0.25);
 }
 
-.text-gradient-red {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FF6B61 50%, #FF3B30 100%);
+.text-gradient-blue, .text-gradient-red {
+  background: linear-gradient(135deg, #FFFFFF 0%, #60A5FA 50%, #2563EB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -69,8 +69,8 @@
   -webkit-text-fill-color: transparent;
 }
 
-.border-gradient-red {
-  border-image: linear-gradient(to right, rgba(255, 59, 48, 0.8), rgba(255, 59, 48, 0.1)) 1;
+.border-gradient-blue, .border-gradient-red {
+  border-image: linear-gradient(to right, rgba(37, 99, 235, 0.8), rgba(37, 99, 235, 0.1)) 1;
 }
 
 /* Custom Animated Background Grid */
@@ -82,7 +82,7 @@
 }
 
 .bg-dots-pattern {
-  background-image: radial-gradient(rgba(255, 59, 48, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(37, 99, 235, 0.18) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -92,25 +92,25 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #07090e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #1e293b;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF3B30;
+  background: #2563EB;
 }
 
-/* Pulsing Red Dot */
+/* Pulsing Blue Dot */
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(255, 59, 48, 0.8), 0 0 20px rgba(255, 59, 48, 0.4);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.8), 0 0 20px rgba(37, 99, 235, 0.4);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 59, 48, 1), 0 0 40px rgba(255, 59, 48, 0.7);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 1), 0 0 40px rgba(37, 99, 235, 0.7);
   }
 }
 
@@ -132,7 +132,7 @@
 }
 
 .border-beam {
-  background: linear-gradient(90deg, transparent, rgba(255, 59, 48, 0.8), transparent);
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.8), transparent);
   background-size: 200% 200%;
   animation: borderBeam 4s infinite linear;
 }
