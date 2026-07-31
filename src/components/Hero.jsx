@@ -165,26 +165,28 @@ export default function Hero({ onOpenResume }) {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="lg:col-span-5 relative flex items-center justify-center"
           >
-            <div className="relative w-full max-w-md aspect-square rounded-3xl p-1 bg-gradient-to-b from-[#FF3B30]/40 via-white/5 to-transparent shadow-[0_0_50px_rgba(255,59,48,0.25)]">
-              <div className="w-full h-full rounded-[23px] bg-[#09090b] overflow-hidden relative flex flex-col justify-between p-6">
+            <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl p-1 bg-gradient-to-b from-[#FF3B30]/50 via-blue-500/20 to-transparent shadow-[0_0_50px_rgba(255,59,48,0.3)] hover:shadow-[0_0_60px_rgba(255,59,48,0.5)] transition-all duration-500">
+              <div className="w-full h-full rounded-[23px] bg-[#09090b] overflow-hidden relative flex flex-col justify-between p-6 group">
                 
                 {/* Hero Image Background with Glass Overlay */}
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 overflow-hidden">
                   <img
-                    src="/images/hero_portrait.png"
-                    alt="Falah Abdussalam Futuristic Portrait"
-                    className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:scale-105 transition-transform duration-700"
+                    src="/images/falah_portrait.jpg"
+                    alt="Falah Abdussalam Professional Portrait"
+                    className="w-full h-full object-cover object-top opacity-95 group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/40 to-transparent" />
+                  {/* Subtle Gradient Overlays for Ambient Lighting & Text Readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#09090b]/50 via-transparent to-transparent" />
                 </div>
 
                 {/* Floating Top Badge */}
                 <div className="relative z-10 flex justify-between items-start">
-                  <div className="glass-card px-3.5 py-1.5 rounded-full flex items-center gap-2 border border-white/10 text-xs font-mono text-zinc-300">
+                  <div className="glass-card px-3.5 py-1.5 rounded-full flex items-center gap-2 border border-white/20 text-xs font-mono text-white backdrop-blur-md bg-black/40 shadow-lg">
                     <Terminal className="w-3.5 h-3.5 text-[#FF3B30]" />
                     <span>ENGINEER & CREATIVE</span>
                   </div>
-                  <div className="w-9 h-9 rounded-full bg-[#FF3B30]/20 border border-[#FF3B30] flex items-center justify-center">
+                  <div className="w-9 h-9 rounded-full bg-[#FF3B30]/20 border border-[#FF3B30] flex items-center justify-center backdrop-blur-md shadow-lg">
                     <Sparkles className="w-4 h-4 text-[#FF3B30] animate-spin" style={{ animationDuration: '6s' }} />
                   </div>
                 </div>
@@ -195,13 +197,13 @@ export default function Hero({ onOpenResume }) {
                     <motion.div
                       key={idx}
                       whileHover={{ scale: 1.03, translateY: -2 }}
-                      className="glass-card p-3.5 rounded-2xl border border-white/10 bg-[#121218]/80 backdrop-blur-md"
+                      className="glass-card p-3.5 rounded-2xl border border-white/15 bg-[#09090b]/80 backdrop-blur-md shadow-xl"
                     >
                       <div className="text-2xl font-extrabold text-white font-mono flex items-baseline">
                         <span className="text-[#FF3B30]">{metric.value}</span>
                         <span className="text-[#FF3B30]">{metric.suffix}</span>
                       </div>
-                      <div className="text-[11px] font-medium text-zinc-400 uppercase tracking-wider mt-0.5">
+                      <div className="text-[11px] font-medium text-zinc-300 uppercase tracking-wider mt-0.5">
                         {metric.label}
                       </div>
                     </motion.div>

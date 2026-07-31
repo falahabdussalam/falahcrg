@@ -59,14 +59,16 @@ export default function About({ onOpenResume }) {
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 space-y-6"
           >
-            <div className="glass-card p-8 rounded-3xl border border-white/10 relative">
-              <div className="w-12 h-12 rounded-2xl bg-[#FF3B30]/10 border border-[#FF3B30]/30 flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-[#FF3B30]" />
+            <div className="glass-card p-8 rounded-3xl border border-white/10 relative overflow-hidden">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="relative w-14 h-14 rounded-2xl p-0.5 bg-gradient-to-tr from-[#FF3B30] via-blue-500 to-transparent shadow-[0_0_20px_rgba(255,59,48,0.3)] overflow-hidden shrink-0">
+                  <img src="/images/falah_portrait.jpg" alt="Falah Abdussalam" className="w-full h-full object-cover rounded-[14px]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white leading-tight">Full-Spectrum Digital Craftsman</h3>
+                  <p className="text-xs text-[#FF3B30] font-mono font-medium mt-0.5">Falah Abdussalam</p>
+                </div>
               </div>
-
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Full-Spectrum Digital Craftsman
-              </h3>
 
               <p className="text-zinc-300 leading-relaxed text-sm sm:text-base mb-4">
                 My journey began with a curiosity for code and visual aesthetics. Over the past 5+ years, I've honed my expertise across software engineering, user experience design, and performance marketing.

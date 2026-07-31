@@ -29,7 +29,7 @@ export default function Contact() {
     return errs;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errs = validate();
     setErrors(errs);
@@ -37,8 +37,20 @@ export default function Contact() {
     if (Object.keys(errs).length === 0) {
       setIsSubmitting(true);
 
-      setTimeout(() => {
-        setIsSubmitting(false);
+      try {
+        const GOOGLE_FORM_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVOrO9AxWjvUKl9A0-LjpKP2nfMiZWiCSZ4I3npQbIwpb8jg/formResponse';
+        const formDataPayload = new FormData();
+        formDataPayload.append('entry.1195235810', formData.name);
+        formDataPayload.append('entry.1346893845', formData.email);
+        formDataPayload.append('entry.1088523263', formData.subject);
+        formDataPayload.append('entry.1639850747', formData.message);
+
+        await fetch(GOOGLE_FORM_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formDataPayload
+        });
+
         setIsSuccess(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
 
@@ -49,7 +61,11 @@ export default function Contact() {
           origin: { y: 0.6 },
           colors: ['#FF3B30', '#FFFFFF', '#FF253A']
         });
-      }, 1000);
+      } catch (error) {
+        console.error('Error submitting form to Google Forms:', error);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
