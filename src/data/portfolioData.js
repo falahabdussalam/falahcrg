@@ -8,7 +8,7 @@ export const personalInfo = {
     "UI/UX Designer",
     "Digital Marketing Specialist"
   ],
-  bio: "Passionate multi-disciplinary technology architect and creative designer with over 5 years of experience bridging software engineering, pixel-perfect UI/UX design, and data-driven digital marketing. Dedicated to engineering high-performance digital products that captivate users and elevate brands worldwide.",
+  bio: "Passionate multi-disciplinary technology architect and creative designer with over 3 years of experience bridging software engineering, pixel-perfect UI/UX design, and data-driven digital marketing. Dedicated to engineering high-performance digital products that captivate users and elevate brands worldwide.",
   location: "Kerala, India",
   email: "falahkodagu@gmail.com",
   phone: "+91 81053 26568",
@@ -16,7 +16,7 @@ export const personalInfo = {
   whatsappUrl: "https://wa.me/918105326568?text=Hi%20Falah,%20I'd%20like%20to%20discuss%20a%20project!",
   availableForHire: true,
   metrics: [
-    { value: 5, suffix: "+", label: "Years Experience" },
+    { value: 3, suffix: "+", label: "Years Experience" },
     { value: 45, suffix: "+", label: "Projects Completed" },
     { value: 30, suffix: "+", label: "Satisfied Clients" },
     { value: 99, suffix: "%", label: "Client Satisfaction" }

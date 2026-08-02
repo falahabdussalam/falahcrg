@@ -71,7 +71,7 @@ export default function About({ onOpenResume }) {
               </div>
 
               <p className="text-zinc-300 leading-relaxed text-sm sm:text-base mb-4">
-                My journey began with a curiosity for code and visual aesthetics. Over the past 5+ years, I've honed my expertise across software engineering, user experience design, and performance marketing.
+                My journey began with a curiosity for code and visual aesthetics. Over the past 3+ years, I've honed my expertise across software engineering, user experience design, and performance marketing.
               </p>
 
               <p className="text-zinc-400 leading-relaxed text-sm sm:text-base">
@@ -85,7 +85,7 @@ export default function About({ onOpenResume }) {
                 </div>
                 <div>
                   <div className="text-xs text-zinc-500 font-mono uppercase">EXPERIENCE</div>
-                  <div className="text-sm font-semibold text-[#2563EB]">5+ Years</div>
+                  <div className="text-sm font-semibold text-[#2563EB]">3+ Years</div>
                 </div>
                 <button
                   onClick={onOpenResume}
