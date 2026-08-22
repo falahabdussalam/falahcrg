@@ -5,22 +5,22 @@ import { GraduationCap, Award, CheckCircle2 } from 'lucide-react';
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 relative overflow-hidden bg-[#07090e]">
+    <section id="education" className="py-24 relative overflow-hidden bg-white">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#2563EB]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-yellow-400/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0d121e] border border-[#2563EB]/30 text-xs font-mono text-[#2563EB] mb-3 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-yellow-100 border border-yellow-400/50 text-xs font-mono font-bold text-yellow-800 mb-3 uppercase tracking-wider">
             <GraduationCap className="w-3.5 h-3.5" />
             <span>ACADEMICS & CREDENTIALS</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Education & <span className="text-gradient-blue">Certifications</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight mb-4">
+            Education & <span className="text-yellow-600 underline decoration-yellow-400 decoration-4">Certifications</span>
           </h2>
-          <p className="text-zinc-400 text-base sm:text-lg">
+          <p className="text-zinc-600 text-base sm:text-lg">
             Formal computer science academic degree and specialized industry master certifications.
           </p>
         </div>
@@ -34,34 +34,34 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-card glass-card-hover p-8 rounded-3xl border border-white/10 flex flex-col justify-between"
+              className="glass-card glass-card-hover p-8 rounded-3xl border border-zinc-200 bg-white flex flex-col justify-between shadow-sm"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#0d121e] border border-[#2563EB]/30 flex items-center justify-center text-[#2563EB]">
+                  <div className="w-12 h-12 rounded-2xl bg-yellow-100 border border-yellow-400/50 flex items-center justify-center text-yellow-700">
                     <Award className="w-6 h-6" />
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-[#2563EB]/15 border border-[#2563EB]/40 text-xs font-mono text-[#2563EB]">
+                  <span className="px-3 py-1 rounded-full bg-yellow-50 border border-yellow-300 text-xs font-mono font-bold text-yellow-800">
                     {edu.period}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-1">{edu.degree}</h3>
-                <div className="text-sm font-semibold text-zinc-300 mb-4">{edu.institution}</div>
+                <h3 className="text-xl font-bold text-zinc-950 mb-1">{edu.degree}</h3>
+                <div className="text-sm font-semibold text-zinc-600 mb-4">{edu.institution}</div>
 
                 <div className="space-y-2 mb-6">
                   {edu.highlights.map((h, hIdx) => (
-                    <div key={hIdx} className="flex items-center gap-2 text-xs text-zinc-400">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#2563EB] shrink-0" />
+                    <div key={hIdx} className="flex items-center gap-2 text-xs text-zinc-600 font-medium">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-yellow-600 shrink-0" />
                       <span>{h}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs font-mono">
+              <div className="pt-4 border-t border-zinc-100 flex items-center justify-between text-xs font-mono">
                 <span className="text-zinc-500 uppercase">STATUS</span>
-                <span className="text-[#2563EB] font-bold">{edu.status}</span>
+                <span className="text-yellow-700 font-bold">{edu.status}</span>
               </div>
             </motion.div>
           ))}

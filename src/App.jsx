@@ -9,7 +9,6 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Experience from './components/Experience';
 import Education from './components/Education';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
@@ -31,7 +30,6 @@ export default function App() {
       'portfolio',
       'experience',
       'education',
-      'testimonials',
       'contact',
     ];
 
@@ -52,8 +50,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#07090e] text-slate-100 selection:bg-[#2563EB] selection:text-white font-['Poppins',sans-serif]">
-      {/* Custom Blue Glow Cursor */}
+    <div className="min-h-screen bg-white text-zinc-900 selection:bg-[#FACC15] selection:text-black font-['Poppins',sans-serif]">
+      {/* Custom Yellow Glow Cursor */}
       <CustomCursor />
 
       {/* Loading Splash Screen */}
@@ -73,7 +71,6 @@ export default function App() {
         <Portfolio onSelectProject={(project) => setSelectedProject(project)} />
         <Experience />
         <Education />
-        <Testimonials />
         <Contact />
       </main>
 

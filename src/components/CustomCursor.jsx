@@ -45,9 +45,9 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Small Blue Center Dot */}
+      {/* Small Yellow Center Dot */}
       <div
-        className="fixed top-0 left-0 w-2.5 h-2.5 bg-[#2563EB] rounded-full pointer-events-none z-[9999] transition-transform duration-75 ease-out shadow-[0_0_10px_#2563EB]"
+        className="fixed top-0 left-0 w-2.5 h-2.5 bg-[#FACC15] rounded-full pointer-events-none z-[9999] transition-transform duration-75 ease-out shadow-[0_0_10px_#FACC15]"
         style={{
           transform: `translate3d(${position.x - 5}px, ${position.y - 5}px, 0) scale(${isHovered ? 2.5 : 1})`,
         }}
@@ -55,11 +55,11 @@ export default function CustomCursor() {
       
       {/* Outer Glowing Ring */}
       <div
-        className="fixed top-0 left-0 w-9 h-9 border border-[#2563EB]/60 rounded-full pointer-events-none z-[9998] transition-all duration-300 ease-out"
+        className="fixed top-0 left-0 w-9 h-9 border border-[#FACC15]/60 rounded-full pointer-events-none z-[9998] transition-all duration-300 ease-out"
         style={{
           transform: `translate3d(${position.x - 18}px, ${position.y - 18}px, 0) scale(${isHovered ? 1.6 : 1})`,
-          backgroundColor: isHovered ? 'rgba(37, 99, 235, 0.12)' : 'transparent',
-          borderColor: isHovered ? '#2563EB' : 'rgba(37, 99, 235, 0.4)',
+          backgroundColor: isHovered ? 'rgba(250, 204, 21, 0.15)' : 'transparent',
+          borderColor: isHovered ? '#FACC15' : 'rgba(250, 204, 21, 0.4)',
         }}
       />
     </>

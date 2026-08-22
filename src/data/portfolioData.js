@@ -1,14 +1,14 @@
 export const personalInfo = {
   name: "Falah Abdussalam",
-  title: "Software Developer | Full Stack Engineer | UI/UX Designer | Digital Marketer",
+  title: "Software Developer | Full Stack Engineer | Graphic Designer | Digital Marketer",
   roles: [
     "Software Developer",
     "Full Stack Developer",
     "Graphic Designer",
-    "UI/UX Designer",
+    "Frontend Engineer",
     "Digital Marketing Specialist"
   ],
-  bio: "Passionate multi-disciplinary technology architect and creative designer with over 3 years of experience bridging software engineering, pixel-perfect UI/UX design, and data-driven digital marketing. Dedicated to engineering high-performance digital products that captivate users and elevate brands worldwide.",
+  bio: "Passionate multi-disciplinary technology architect and creative developer with over 3 years of experience bridging software engineering, graphic design, and data-driven digital marketing. Dedicated to engineering high-performance digital products that elevate brands worldwide.",
   location: "Kerala, India",
   email: "falahkodagu@gmail.com",
   phone: "+91 81053 26568",
@@ -37,19 +37,19 @@ export const skillsData = {
     { name: "JavaScript (ES6+)", level: 95, icon: "FileCode2", color: "#F7DF1E" },
     { name: "TypeScript", level: 90, icon: "FileCode", color: "#3178C6" },
     { name: "React.js", level: 95, icon: "Atom", color: "#61DAFB" },
-    { name: "Next.js", level: 90, icon: "Zap", color: "#FFFFFF" },
+    { name: "Next.js", level: 90, icon: "Zap", color: "#000000" },
     { name: "Tailwind CSS", level: 98, icon: "Wind", color: "#06B6D4" }
   ],
   Backend: [
     { name: "Node.js", level: 92, icon: "Server", color: "#5FA04E" },
-    { name: "Express.js", level: 90, icon: "Cpu", color: "#A8B2D1" },
+    { name: "Express.js", level: 90, icon: "Cpu", color: "#6B7280" },
     { name: "MongoDB", level: 88, icon: "Database", color: "#47A248" },
     { name: "Firebase", level: 88, icon: "Flame", color: "#FFCA28" }
   ],
   Programming: [
     { name: "Python", level: 88, icon: "Terminal", color: "#3776AB" },
     { name: "Java", level: 82, icon: "Coffee", color: "#5382A1" },
-    { name: "C", level: 80, icon: "Code", color: "#A8B2D1" },
+    { name: "C", level: 80, icon: "Code", color: "#6B7280" },
     { name: "C++", level: 85, icon: "Binary", color: "#00599C" }
   ],
   Design: [
@@ -81,15 +81,15 @@ export const servicesData = [
     ]
   },
   {
-    id: "uiux",
-    title: "UI/UX & Interactive Design",
+    id: "frontend",
+    title: "Frontend Engineering",
     icon: "Figma",
-    description: "Crafting intuitive, human-centered digital experiences, wireframes, high-fidelity prototypes, and sleek design systems.",
+    description: "Engineering blazing-fast, responsive web interfaces, reusable component libraries, and engaging micro-interactions.",
     features: [
-      "User Research & Wireframing",
-      "Interactive High-Fidelity Prototypes",
+      "Responsive Web Applications",
+      "Interactive Dynamic Components",
       "Design Systems & Component Libraries",
-      "Usability Testing & Micro-interactions"
+      "Cross-Browser Optimization & Speed"
     ]
   },
   {
@@ -146,7 +146,7 @@ export const projectsData = [
     title: "Aura Mobile - FinTech iOS App",
     category: "Mobile UI",
     image: "/images/project_mobile.png",
-    description: "An ultra-sleek financial management mobile application UI/UX concept with biometrics, instant transfer flows, crypto tracking, and minimalist dark aesthetics.",
+    description: "An ultra-sleek financial management mobile application concept with biometrics, instant transfer flows, crypto tracking, and minimalist modern aesthetics.",
     tech: ["Figma", "React Native", "Tailwind CSS", "Redux Toolkit", "Framer Motion"],
     github: "https://github.com/falahabdussalam/aura-fintech-mobile",
     demo: "https://dribbble.com/shots/aura-fintech-ui",
@@ -223,21 +223,21 @@ export const projectsData = [
 export const experienceData = [
   {
     id: 1,
-    role: "Senior Full Stack Engineer & UI Architect",
+    role: "Senior Full Stack & Frontend Engineer",
     company: "Apex Tech Innovations",
     period: "2024 - Present",
     location: "Remote",
-    description: "Leading frontend architecture and backend API integrations for enterprise cloud platforms. Directing UI/UX design systems and team development workflows.",
+    description: "Leading frontend architecture and backend API integrations for enterprise cloud platforms. Directing modern design systems and agile development workflows.",
     skills: ["React", "Next.js", "Node.js", "Tailwind CSS", "Figma", "MongoDB"]
   },
   {
     id: 2,
-    role: "Lead UI/UX Designer & Developer",
+    role: "Lead Frontend Developer & Graphic Designer",
     company: "Starlight Digital Studio",
     period: "2022 - 2024",
     location: "Kochi, India",
-    description: "Designed and engineered over 25 client websites and mobile apps. Conducted user research, wireframing, interactive prototyping, and cross-platform frontend development.",
-    skills: ["Figma", "React", "TypeScript", "Photoshop", "Illustrator"]
+    description: "Designed and engineered over 25 client websites and web applications. Created interactive components, brand graphics, and cross-platform frontend code.",
+    skills: ["React", "TypeScript", "Tailwind CSS", "Photoshop", "Illustrator"]
   },
   {
     id: 3,
@@ -278,11 +278,11 @@ export const educationData = [
   },
   {
     id: 3,
-    degree: "UI/UX Master Certification & Design Systems",
+    degree: "Frontend Architecture & Modern Web Design Systems",
     institution: "Interaction Design Foundation (IxDF)",
     period: "2023",
     status: "Certified",
-    highlights: ["User-Centered Design", "Figma Prototyping", "Design System Architecture"]
+    highlights: ["Component Architecture", "Design Systems", "Web Performance"]
   },
   {
     id: 4,

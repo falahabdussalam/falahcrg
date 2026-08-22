@@ -12,23 +12,23 @@ export default function Portfolio({ onSelectProject }) {
     : projectsData.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-24 relative overflow-hidden bg-[#07090e]">
+    <section id="portfolio" className="py-24 relative overflow-hidden bg-white">
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-yellow-400/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0d121e] border border-[#2563EB]/30 text-xs font-mono text-[#2563EB] mb-3 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-yellow-100 border border-yellow-400/50 text-xs font-mono font-bold text-yellow-800 mb-3 uppercase tracking-wider">
             <FolderKanban className="w-3.5 h-3.5" />
             <span>FEATURED SHOWCASE</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Selected <span className="text-gradient-blue">Portfolio</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight mb-4">
+            Selected <span className="text-yellow-600 underline decoration-yellow-400 decoration-4">Portfolio</span>
           </h2>
-          <p className="text-zinc-400 text-base sm:text-lg">
-            A showcase of digital products, software applications, mobile UI concepts, brand identities, and growth marketing campaigns.
+          <p className="text-zinc-600 text-base sm:text-lg">
+            A showcase of digital products, software applications, web applications, brand identities, and growth marketing campaigns.
           </p>
         </div>
 
@@ -42,8 +42,8 @@ export default function Portfolio({ onSelectProject }) {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 ${
                   isActive
-                    ? 'bg-[#2563EB] text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]'
-                    : 'bg-[#0d121e] border border-white/10 text-zinc-400 hover:text-white hover:border-[#2563EB]/50'
+                    ? 'bg-yellow-400 text-black font-bold shadow-md'
+                    : 'bg-zinc-100 border border-zinc-200 text-zinc-700 hover:text-black hover:bg-zinc-200'
                 }`}
               >
                 {cat}
@@ -66,25 +66,25 @@ export default function Portfolio({ onSelectProject }) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="glass-card glass-card-hover rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-between group"
+                className="glass-card glass-card-hover rounded-3xl overflow-hidden border border-zinc-200 bg-white flex flex-col justify-between group shadow-sm"
               >
                 {/* Project Image & Overlay */}
-                <div className="relative aspect-video overflow-hidden bg-[#0d121e] cursor-pointer" onClick={() => onSelectProject(project)}>
+                <div className="relative aspect-video overflow-hidden bg-zinc-100 cursor-pointer" onClick={() => onSelectProject(project)}>
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#07090e] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
                   
                   {/* Category Pill Tag */}
-                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#0d121e]/80 backdrop-blur-md border border-white/10 text-[11px] font-mono text-[#2563EB]">
+                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-zinc-200 text-[11px] font-mono font-bold text-yellow-800 shadow-xs">
                     {project.category}
                   </span>
 
                   {/* Hover Inspect Icon */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 backdrop-blur-xs transition-opacity duration-300">
-                    <div className="w-12 h-12 rounded-full bg-[#2563EB] text-white flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.6)]">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/30 backdrop-blur-xs transition-opacity duration-300">
+                    <div className="w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center shadow-lg">
                       <Eye className="w-6 h-6" />
                     </div>
                   </div>
@@ -95,11 +95,11 @@ export default function Portfolio({ onSelectProject }) {
                   <div>
                     <h3
                       onClick={() => onSelectProject(project)}
-                      className="text-xl font-bold text-white mb-2 group-hover:text-[#2563EB] transition-colors cursor-pointer"
+                      className="text-xl font-bold text-zinc-950 mb-2 group-hover:text-yellow-700 transition-colors cursor-pointer"
                     >
                       {project.title}
                     </h3>
-                    <p className="text-zinc-400 text-xs leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-zinc-600 text-xs leading-relaxed mb-4 line-clamp-2">
                       {project.description}
                     </p>
 
@@ -108,7 +108,7 @@ export default function Portfolio({ onSelectProject }) {
                       {project.tech.map((t, idx) => (
                         <span
                           key={idx}
-                          className="px-2.5 py-0.5 rounded-md bg-[#0d121e] border border-white/5 text-[10px] font-mono text-zinc-300"
+                          className="px-2.5 py-0.5 rounded-md bg-zinc-100 border border-zinc-200 text-[10px] font-mono text-zinc-700"
                         >
                           {t}
                         </span>
@@ -117,19 +117,19 @@ export default function Portfolio({ onSelectProject }) {
                   </div>
 
                   {/* Card Bottom Links */}
-                  <div className="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+                  <div className="pt-4 border-t border-zinc-100 flex items-center justify-between">
                     {project.github ? (
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-700 hover:text-black transition-colors"
                       >
                         <GithubIcon className="w-4 h-4" />
                         <span>Code</span>
                       </a>
                     ) : (
-                      <span className="text-xs text-zinc-600 font-mono">Private Repository</span>
+                      <span className="text-xs text-zinc-400 font-mono">Private Repository</span>
                     )}
 
                     {project.demo && (
@@ -137,7 +137,7 @@ export default function Portfolio({ onSelectProject }) {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2563EB] hover:underline"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-700 hover:text-black hover:underline"
                       >
                         <span>Live Preview</span>
                         <ExternalLink className="w-3.5 h-3.5" />
