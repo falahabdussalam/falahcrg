@@ -44,39 +44,33 @@ export default function Navbar({ activeSection, onOpenResume }) {
 
   return (
     <>
-      {/* Scroll Progress Indicator Bar at top */}
-      <div className="fixed top-0 left-0 right-0 h-[3px] bg-transparent z-[1001]">
+      <div className="fixed top-0 left-0 right-0 h-[2px] bg-transparent z-[1001]">
         <div
-          className="h-full bg-gradient-to-r from-[#2563EB] via-blue-500 to-cyan-400 shadow-[0_0_10px_#2563EB] transition-all duration-150"
+          className="h-full bg-gradient-to-r from-[#fef3c7] via-[#facc15] to-[#fbbf24] transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
 
-      {/* Main Glass Navbar */}
       <header
         className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
-          isScrolled
-            ? 'glass-nav py-3 shadow-lg shadow-black/40'
-            : 'bg-transparent py-5'
+          isScrolled ? 'glass-nav py-3 shadow-lg shadow-black/20' : 'bg-transparent py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, '#hero')}
             className="flex items-center gap-2 group"
           >
-            <div className="w-9 h-9 rounded-xl bg-[#0d121e] border border-[#2563EB]/30 flex items-center justify-center group-hover:border-[#2563EB] transition-all duration-300 shadow-[0_0_15px_rgba(37,99,235,0.25)]">
-              <Code2 className="w-5 h-5 text-[#2563EB] group-hover:rotate-12 transition-transform duration-300" />
+            <div className="w-10 h-10 rounded-xl bg-[#171717] border border-[#facc15]/40 flex items-center justify-center text-[#facc15] shadow-[0_8px_22px_rgba(250,204,21,0.12)]">
+              <Code2 className="w-5 h-5" />
             </div>
-            <span className="text-xl font-bold tracking-tight text-white font-['Poppins']">
-              FALAH<span className="text-[#2563EB]">.</span>
+            <span className="text-xl font-bold tracking-tight text-white">
+              FALAH<span className="text-[#facc15]">.</span>
             </span>
           </a>
 
-          {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center gap-1 bg-[#0d121e]/60 p-1.5 rounded-full border border-white/10 backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-1 rounded-full border border-slate-800 bg-[#171717]/70 p-1.5 backdrop-blur-md">
             {navItems.map((item) => {
               const isActive = activeSection === item.href.substring(1);
               return (
@@ -85,13 +79,13 @@ export default function Navbar({ activeSection, onOpenResume }) {
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`relative px-4 py-1.5 text-xs font-medium rounded-full transition-colors duration-200 ${
-                    isActive ? 'text-white' : 'text-zinc-400 hover:text-white'
+                    isActive ? 'text-black' : 'text-slate-300 hover:text-white'
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-[#2563EB] rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)] -z-10"
+                      className="absolute inset-0 bg-[#facc15] rounded-full -z-10"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -101,31 +95,29 @@ export default function Navbar({ activeSection, onOpenResume }) {
             })}
           </nav>
 
-          {/* Action Buttons */}
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onOpenResume}
-              className="px-4 py-2 text-xs font-semibold rounded-full border border-zinc-700 text-zinc-300 hover:text-white hover:border-[#2563EB] transition-all duration-300 backdrop-blur-sm"
+              className="px-4 py-2 text-xs font-semibold rounded-full border border-slate-700 text-slate-200 hover:text-white hover:border-[#facc15] transition-all duration-300"
             >
               Resume
             </button>
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="group inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-full bg-[#2563EB] text-white hover:bg-[#1D4ED8] shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all duration-300 transform hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-full bg-[#facc15] text-black hover:bg-[#fbbf24] transition-all duration-300"
             >
               Hire Me
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl bg-[#0d121e] border border-white/10 text-zinc-300 hover:text-white focus:outline-none"
+            className="lg:hidden p-2 rounded-xl bg-[#111827] border border-slate-700 text-slate-300 hover:text-white focus:outline-none"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6 text-[#2563EB]" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6 text-[#60a5fa]" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </header>
@@ -150,7 +142,7 @@ export default function Navbar({ activeSection, onOpenResume }) {
                     onClick={(e) => handleNavClick(e, item.href)}
                     className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
                       isActive
-                        ? 'bg-[#2563EB] text-white font-semibold shadow-[0_0_15px_rgba(37,99,235,0.4)]'
+                        ? 'bg-[#facc15] text-black font-semibold'
                         : 'text-zinc-300 hover:bg-white/5 hover:text-white'
                     }`}
                   >
@@ -171,7 +163,7 @@ export default function Navbar({ activeSection, onOpenResume }) {
                 <a
                   href="#contact"
                   onClick={(e) => handleNavClick(e, '#contact')}
-                  className="w-full py-3 rounded-xl bg-[#2563EB] text-white text-sm font-semibold text-center shadow-[0_0_20px_rgba(37,99,235,0.4)]"
+                  className="w-full py-3 rounded-xl bg-[#facc15] text-black text-sm font-semibold text-center"
                 >
                   Let's Connect
                 </a>

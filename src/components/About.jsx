@@ -28,15 +28,12 @@ const pillars = [
 
 export default function About({ onOpenResume }) {
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-[#07090e]">
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-[140px] pointer-events-none" />
+    <section id="about" className="py-24 relative overflow-hidden bg-[#050505]">
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#facc15]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0d121e] border border-[#2563EB]/30 text-xs font-mono text-[#2563EB] mb-3 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#171717] border border-[#facc15]/30 text-xs font-mono text-[#facc15] mb-3 uppercase tracking-wider">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>WHO I AM</span>
           </div>
@@ -48,10 +45,7 @@ export default function About({ onOpenResume }) {
           </p>
         </div>
 
-        {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-          
-          {/* Left Column: Story & Philosophy */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -60,14 +54,9 @@ export default function About({ onOpenResume }) {
             className="lg:col-span-6 space-y-6"
           >
             <div className="glass-card p-8 rounded-3xl border border-white/10 relative overflow-hidden">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-14 h-14 rounded-2xl p-0.5 bg-gradient-to-tr from-[#2563EB] via-cyan-500 to-transparent shadow-[0_0_20px_rgba(37,99,235,0.3)] overflow-hidden shrink-0">
-                  <img src="/images/falah_portrait.jpg" alt="Falah Abdussalam" className="w-full h-full object-cover rounded-[14px]" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white leading-tight">Full-Spectrum Digital Craftsman</h3>
-                  <p className="text-xs text-[#2563EB] font-mono font-medium mt-0.5">Falah Abdussalam</p>
-                </div>
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-white leading-tight">Full-Spectrum Digital Craftsman</h3>
+                <p className="text-xs text-[#facc15] font-mono font-medium mt-0.5">Falah Abdussalam</p>
               </div>
 
               <p className="text-zinc-300 leading-relaxed text-sm sm:text-base mb-4">
@@ -85,11 +74,11 @@ export default function About({ onOpenResume }) {
                 </div>
                 <div>
                   <div className="text-xs text-zinc-500 font-mono uppercase">EXPERIENCE</div>
-                  <div className="text-sm font-semibold text-[#2563EB]">3+ Years</div>
+                  <div className="text-sm font-semibold text-[#facc15]">3+ Years</div>
                 </div>
                 <button
                   onClick={onOpenResume}
-                  className="px-4 py-2 text-xs font-semibold rounded-full bg-[#2563EB]/20 border border-[#2563EB] text-white hover:bg-[#2563EB] transition-colors"
+                  className="px-4 py-2 text-xs font-semibold rounded-full bg-[#facc15]/10 border border-[#facc15] text-white hover:bg-[#facc15] hover:text-black transition-colors"
                 >
                   View CV
                 </button>
@@ -97,7 +86,6 @@ export default function About({ onOpenResume }) {
             </div>
           </motion.div>
 
-          {/* Right Column: 4 Pillars Grid */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {pillars.map((pillar, idx) => {
               const IconComp = pillar.icon;
@@ -110,7 +98,7 @@ export default function About({ onOpenResume }) {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="glass-card glass-card-hover p-6 rounded-2xl border border-white/10"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#0d121e] border border-[#2563EB]/30 flex items-center justify-center mb-4 text-[#2563EB]">
+                  <div className="w-10 h-10 rounded-xl bg-[#171717] border border-[#facc15]/30 flex items-center justify-center mb-4 text-[#facc15]">
                     <IconComp className="w-5 h-5" />
                   </div>
                   <h4 className="text-lg font-bold text-white mb-2">{pillar.title}</h4>
@@ -119,9 +107,7 @@ export default function About({ onOpenResume }) {
               );
             })}
           </div>
-
         </div>
-
       </div>
     </section>
   );
