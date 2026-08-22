@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CustomCursor from './components/CustomCursor';
-import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,14 +7,12 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Experience from './components/Experience';
 import Education from './components/Education';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
 import ResumeModal from './components/ResumeModal';
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedProject, setSelectedProject] = useState(null);
   const [resumeOpen, setResumeOpen] = useState(false);
@@ -31,7 +27,6 @@ export default function App() {
       'portfolio',
       'experience',
       'education',
-      'testimonials',
       'contact',
     ];
 
@@ -52,14 +47,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#07090e] text-slate-100 selection:bg-[#2563EB] selection:text-white font-['Poppins',sans-serif]">
-      {/* Custom Blue Glow Cursor */}
-      <CustomCursor />
-
-      {/* Loading Splash Screen */}
-      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
-
-      {/* Main Portfolio Structure */}
+    <div className="min-h-screen bg-[#050505] text-slate-100 selection:bg-[#facc15] selection:text-black font-['Poppins',sans-serif]">
       <Navbar
         activeSection={activeSection}
         onOpenResume={() => setResumeOpen(true)}
@@ -73,7 +61,6 @@ export default function App() {
         <Portfolio onSelectProject={(project) => setSelectedProject(project)} />
         <Experience />
         <Education />
-        <Testimonials />
         <Contact />
       </main>
 
