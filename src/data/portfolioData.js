@@ -17,7 +17,7 @@ export const personalInfo = {
   availableForHire: true,
   metrics: [
     { value: 3, suffix: "+", label: "Years Experience" },
-    { value: 45, suffix: "+", label: "Projects Completed" },
+    { value: 15, suffix: "+", label: "Projects Completed" },
     { value: 30, suffix: "+", label: "Satisfied Clients" },
     { value: 99, suffix: "%", label: "Client Satisfaction" }
   ],
